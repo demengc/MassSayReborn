@@ -1,0 +1,22 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#    _____                         _________              #
+#   /     \ _____    ______ ______/   _____/____  ___.__. #
+#  /  \ /  \\__  \  /  ___//  ___/\_____  \\__  \<   |  | #
+# /    Y    \/ __ \_\___ \ \___ \ /        \/ __ \\___  | #
+# \____|__  (____  /____  >____  >_______  (____  / ____| #
+#         \/     \/     \/     \/        \/     \/\/      #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# |
+# CONFIGURATION FILE FOR MASSSAYREBORN BY DEMENG7215 #
+# This is where you can customize the functions and messages of MassSayReborn. #
+# Everything in this file should be clearly explained. For questions, use the support options.
+# Thank you for using MassSayReborn!
+
+# The prefix of the plugin that will be displayed in front of every message MassSayReborn sends.
+prefix: "&7[&bMassSay&7] &r"
+
+# The message that will be sent if the command executor does not have sufficient permission.
+no-perms: "&fYou do not have permission to execute that command.."
+
+# This message will be sent if the command sender does not include a message to mass say.
+not-enough-args: "&fPlease include a message or command you would like everyone to say/do."

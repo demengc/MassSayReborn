@@ -1,0 +1,8 @@
+name: MassSayReborn
+version: ${project.version}
+main: com.demeng7215.masssayreborn.MassSayReborn
+api-version: 1.13
+author: Demeng7215
+description: Make all your players say whatever you want!
+website: https://demeng7215.com/
+prefix: MassSay
