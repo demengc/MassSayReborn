@@ -12,11 +12,17 @@
 # Everything in this file should be clearly explained. For questions, use the support options.
 # Thank you for using MassSayReborn!
 
-# The prefix of the plugin that will be displayed in front of every message MassSayReborn sends.
 prefix: "&7[&bMassSay&7] &r"
+
+# The number of ticks to wait between every message that is sent.
+# Usually, 20 ticks = 1 second.
+delay-between-messages: 10
 
 # The message that will be sent if the command executor does not have sufficient permission.
 no-perms: "&fYou do not have permission to execute that command.."
 
 # This message will be sent if the command sender does not include a message to mass say.
 not-enough-args: "&fPlease include a message or command you would like everyone to say/do."
+
+# The message that is sent after the reload command is executed.
+reloaded: "&fFiles have been successfully reloaded."

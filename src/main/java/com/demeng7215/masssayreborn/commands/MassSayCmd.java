@@ -10,34 +10,37 @@ import java.util.Collections;
 
 public class MassSayCmd extends CustomCommand {
 
-	private MassSayReborn i;
+  private final MassSayReborn i;
 
-	public MassSayCmd(MassSayReborn i) {
-		super("masssay");
-		setDescription("Forces all online players to say something or execute a command.");
-		setAliases(Collections.singletonList("massay"));
+  public MassSayCmd(MassSayReborn i) {
+    super("masssay");
 
-		this.i = i;
-	}
+    this.i = i;
 
-	@Override
-	protected void run(CommandSender sender, String[] args) {
+    setDescription("Forces all online players to say something or execute a command.");
+    setAliases(Collections.singletonList("massay"));
+  }
 
-		if (!checkHasPerm("masssay.use", sender, i.getConfiguration().getString("no-perms"))) return;
+  @Override
+  protected void run(CommandSender sender, String[] args) {
 
-		if (!checkArgs(args, 1, sender, i.getConfiguration().getString("not-enough-args"))) return;
+    if (!checkHasPerm("masssay.use", sender, i.getSettings().getString("no-perms"))) return;
 
-		String message = String.join(" ", args);
+    if (!checkArgs(args, 1, sender, i.getSettings().getString("not-enough-args"))) return;
 
-		if (message.startsWith("/")) {
-			if (!checkHasPerm("masssay.use.command", sender,
-					i.getConfiguration().getString("no-perms"))) return;
+    final String message = String.join(" ", args);
 
-		} else if (!checkHasPerm("masssay.use.message", sender,
-				i.getConfiguration().getString("no-perms"))) return;
+    if (message.startsWith("/")) {
+      if (!checkHasPerm("masssay.use.command", sender, i.getSettings().getString("no-perms")))
+        return;
 
-		for (final Player p : Bukkit.getServer().getOnlinePlayers()) {
-			Bukkit.getScheduler().scheduleSyncDelayedTask(i, () -> p.chat(message), 10);
-		}
-	}
+    } else if (!checkHasPerm("masssay.use.message", sender, i.getSettings().getString("no-perms")))
+      return;
+
+    for (final Player p : Bukkit.getServer().getOnlinePlayers()) {
+      Bukkit.getScheduler()
+          .scheduleSyncDelayedTask(
+              i, () -> p.chat(message), i.getSettings().getLong("delay-between-messages"));
+    }
+  }
 }
