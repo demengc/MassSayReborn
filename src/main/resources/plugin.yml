@@ -1,8 +1,14 @@
 name: MassSayReborn
 version: ${project.version}
-main: com.demeng7215.masssayreborn.MassSayReborn
+main: dev.demeng.masssayreborn.MassSayReborn
 api-version: 1.13
-author: Demeng7215
+author: Demeng
 description: Make all your players say whatever you want!
-website: https://demeng7215.com/
+website: https://demeng.dev/
 prefix: MassSay
+
+commands:
+  masssayreborn:
+    aliases: [msr]
+  masssay:
+    aliases: [massay]

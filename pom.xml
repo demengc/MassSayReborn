@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.demeng7215</groupId>
+    <groupId>dev.demeng</groupId>
     <artifactId>masssayreborn</artifactId>
-    <version>1.4.0</version>
+    <version>1.4.1</version>
     <packaging>jar</packaging>
 
     <name>MassSayReborn</name>
@@ -15,7 +15,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    <url>http://demeng7215.com</url>
+    <url>http://demeng.dev/</url>
 
     <repositories>
         <repository>
@@ -40,19 +40,19 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.15.2-R0.1-SNAPSHOT</version>
+            <version>1.16.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.demeng7215</groupId>
+            <groupId>dev.demeng</groupId>
             <artifactId>demlib</artifactId>
-            <version>4.0.0</version>
+            <version>4.1.0</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.bstats</groupId>
             <artifactId>bstats-bukkit</artifactId>
-            <version>1.5</version>
+            <version>1.7</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
@@ -84,12 +84,12 @@
                             <createDependencyReducedPom>false</createDependencyReducedPom>
                             <relocations>
                                 <relocation>
-                                    <pattern>com.demeng7215.demlib</pattern>
-                                    <shadedPattern>com.demeng7215.masssayreborn.shaded.demlib</shadedPattern>
+                                    <pattern>dev.demeng.demlib</pattern>
+                                    <shadedPattern>dev.demeng.masssayreborn.shaded.demlib</shadedPattern>
                                 </relocation>
                                 <relocation>
                                     <pattern>org.bstats</pattern>
-                                    <shadedPattern>com.demeng7215.masssayreborn.shaded.metrics</shadedPattern>
+                                    <shadedPattern>dev.demeng.masssayreborn.shaded.bstats</shadedPattern>
                                 </relocation>
                             </relocations>
                         </configuration>
