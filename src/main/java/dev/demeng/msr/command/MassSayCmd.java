@@ -28,12 +28,12 @@ public class MassSayCmd extends CustomCommand {
 
     if (message.startsWith("/")) {
       if (!sender.hasPermission("masssay.use.command")) {
-        MessageUtils.tell(sender, i.getSettings().getString("no-perms"));
+        MessageUtils.tell(sender, i.getSettings().getString("no-permission"));
         return;
       }
 
     } else if (!sender.hasPermission("masssay.use.message")) {
-      MessageUtils.tell(sender, i.getSettings().getString("no-perms"));
+      MessageUtils.tell(sender, i.getSettings().getString("no-permission"));
       return;
     }
 
