@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>dev.demeng</groupId>
-    <artifactId>masssayreborn</artifactId>
-    <version>1.4.1</version>
+    <artifactId>MassSayReborn</artifactId>
+    <version>1.5.0</version>
     <packaging>jar</packaging>
 
     <name>MassSayReborn</name>
@@ -46,7 +46,7 @@
         <dependency>
             <groupId>dev.demeng</groupId>
             <artifactId>demlib</artifactId>
-            <version>4.1.0</version>
+            <version>4.4.0</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
@@ -54,6 +54,12 @@
             <artifactId>bstats-bukkit</artifactId>
             <version>1.7</version>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.10</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
@@ -85,11 +91,11 @@
                             <relocations>
                                 <relocation>
                                     <pattern>dev.demeng.demlib</pattern>
-                                    <shadedPattern>dev.demeng.masssayreborn.shaded.demlib</shadedPattern>
+                                    <shadedPattern>dev.demeng.msr.shaded.demlib</shadedPattern>
                                 </relocation>
                                 <relocation>
                                     <pattern>org.bstats</pattern>
-                                    <shadedPattern>dev.demeng.masssayreborn.shaded.bstats</shadedPattern>
+                                    <shadedPattern>dev.demeng.msr.shaded.bstats</shadedPattern>
                                 </relocation>
                             </relocations>
                         </configuration>
