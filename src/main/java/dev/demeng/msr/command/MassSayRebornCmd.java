@@ -23,9 +23,12 @@ public class MassSayRebornCmd extends CustomCommand {
   @Override
   protected void run(CommandSender sender, String[] args) {
 
-    if (args.length == 1
-        && args[0].equalsIgnoreCase("reload")
-        && sender.hasPermission("masssay.reload")) {
+    if (args.length == 1 && args[0].equalsIgnoreCase("reload")) {
+
+      if (!sender.hasPermission("masssay.reload")) {
+        MessageUtils.tell(sender, i.getSettings().getString("no-permission"));
+        return;
+      }
 
       i.getSettingsFile().reloadConfig();
       MessageUtils.tell(sender, i.getSettings().getString("reloaded"));
