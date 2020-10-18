@@ -36,6 +36,6 @@ public class MassSayRebornCmd extends CustomCommand {
         sender,
         "&b&lRunning MassSayReborn v" + Common.getVersion() + " by Demeng.",
         "&&bLink: &fhttps://spigotmc.org/resources/63862/",
-        "&bType &f/masssay </cmd|msg> &bto mass say a command/message.");
+        "&bType &f/masssay </command|msg> &bto mass say.");
   }
 }

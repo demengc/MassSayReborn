@@ -14,7 +14,7 @@ public class MassSayCmd extends CustomCommand {
   private final MassSayReborn i;
 
   public MassSayCmd(MassSayReborn i) {
-    super("masssay", false, null, 0, "</command|message>");
+    super("masssay", false, null, 1, "</command|message>");
 
     this.i = i;
 
