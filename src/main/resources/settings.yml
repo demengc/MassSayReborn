@@ -1,18 +1,16 @@
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-#    _____                         _________              #
-#   /     \ _____    ______ ______/   _____/____  ___.__. #
-#  /  \ /  \\__  \  /  ___//  ___/\_____  \\__  \<   |  | #
-# /    Y    \/ __ \_\___ \ \___ \ /        \/ __ \\___  | #
-# \____|__  (____  /____  >____  >_______  (____  / ____| #
-#         \/     \/     \/     \/        \/     \/\/      #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#    _____                         _________
+#   /     \ _____    ______ ______/   _____/____  ___.__.
+#  /  \ /  \\__  \  /  ___//  ___/\_____  \\__  \<   |  |
+# /    Y    \/ __ \_\___ \ \___ \ /        \/ __ \\___  |
+# \____|__  (____  /____  >____  >_______  (____  / ____|
+#         \/     \/     \/     \/        \/     \/\/
 # |
 # CONFIGURATION FILE FOR MASSSAYREBORN BY DEMENG #
 # This is where you can customize the functions and messages of MassSayReborn. #
 # Everything in this file should be clearly explained. For questions, use the support options.
 # Thank you for using MassSayReborn!
 
-config-version: 2
+config-version: 3
 
 # The prefix that is displayed in front of every message.
 prefix: "&7[&bMassSay&7] &r"
@@ -22,10 +20,10 @@ prefix: "&7[&bMassSay&7] &r"
 delay-between-messages: 10
 
 # The message that will be sent if the command executor does not have sufficient permission.
-no-permission: "&fYou do not have permission to execute that command.."
+insufficient-permission: "&fYou do not have permission to execute that command.."
 
 # This message will be sent if the command sender does not include a message to mass say.
-invalid-args: "&fPlease include a message or command you would like everyone to say/do."
+incorrect-usage: "&fPlease include a message or command you would like everyone to say/do."
 
 # The message that is sent after the reload command is executed.
 reloaded: "&fFiles have been successfully reloaded."

@@ -1,7 +1,6 @@
 name: MassSayReborn
 version: ${project.version}
 main: dev.demeng.msr.MassSayReborn
-api-version: 1.13
-author: Demeng
+authors: [ Demeng ]
 description: Make all your players say whatever you want!
 website: https://demeng.dev/
