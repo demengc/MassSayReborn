@@ -17,7 +17,7 @@ prefix: "&7[&bMassSay&7] &r"
 
 # The number of ticks to wait between every message that is sent.
 # In most cases, 20 ticks is equal to 1 second.
-delay-between-messages: 10
+delay-between-messages: 7
 
 # The message that will be sent if the command executor does not have sufficient permission.
 # Use %permission% for the required permission.
