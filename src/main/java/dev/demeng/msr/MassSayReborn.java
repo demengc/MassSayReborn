@@ -32,7 +32,6 @@ import dev.demeng.pluginbase.UpdateChecker;
 import dev.demeng.pluginbase.YamlConfig;
 import dev.demeng.pluginbase.chat.ChatUtils;
 import dev.demeng.pluginbase.plugin.BasePlugin;
-import dev.demeng.pluginbase.utils.TaskUtils;
 import java.io.IOException;
 import lombok.Getter;
 import org.bstats.bukkit.Metrics;
@@ -116,27 +115,25 @@ public final class MassSayReborn extends BasePlugin {
 
   private void checkUpdates() {
 
-    TaskUtils.runAsync(task -> {
-      final UpdateChecker checker = new UpdateChecker(63862);
+    final UpdateChecker checker = new UpdateChecker(63862);
 
-      switch (checker.getResult()) {
-        case OUTDATED:
-          ChatUtils.coloredConsole(
-              "&2" + ChatUtils.CONSOLE_LINE,
-              "&aA newer version of " + Common.getName() + " is available!",
-              "&aCurrent version: &r" + Common.getVersion(),
-              "&aLatest version: &r" + checker.getLatestVersion(),
-              "&aGet the update: &rhttps://spigotmc.org/resources/" + checker.getResourceId(),
-              "&2" + ChatUtils.CONSOLE_LINE);
-          break;
+    switch (checker.getResult()) {
+      case OUTDATED:
+        ChatUtils.coloredConsole(
+            "&2" + ChatUtils.CONSOLE_LINE,
+            "&aA newer version of " + Common.getName() + " is available!",
+            "&aCurrent version: &r" + Common.getVersion(),
+            "&aLatest version: &r" + checker.getLatestVersion(),
+            "&aGet the update: &rhttps://spigotmc.org/resources/" + checker.getResourceId(),
+            "&2" + ChatUtils.CONSOLE_LINE);
+        break;
 
-        case ERROR:
-          getLogger().warning("Failed to check for updates.");
-          break;
+      case ERROR:
+        getLogger().warning("Failed to check for updates.");
+        break;
 
-        default:
-          break;
-      }
-    });
+      default:
+        break;
+    }
   }
 }
