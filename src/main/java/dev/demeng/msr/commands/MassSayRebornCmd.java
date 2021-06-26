@@ -34,6 +34,7 @@ import dev.demeng.pluginbase.command.annotations.Default;
 import dev.demeng.pluginbase.command.annotations.Description;
 import dev.demeng.pluginbase.command.annotations.Permission;
 import dev.demeng.pluginbase.command.annotations.SubCommand;
+import dev.demeng.pluginbase.command.annotations.Usage;
 import java.io.IOException;
 import lombok.RequiredArgsConstructor;
 import org.bukkit.command.CommandSender;
@@ -48,6 +49,7 @@ public class MassSayRebornCmd extends CommandBase {
 
   @Default
   @Description("Displays plugin information.")
+  @Usage("/msr")
   public void runDefault(CommandSender sender) {
     ChatUtils.tellColored(
         sender,
@@ -61,6 +63,7 @@ public class MassSayRebornCmd extends CommandBase {
   @SubCommand("reload")
   @Description("Reloads configuration files.")
   @Permission("masssay.reload")
+  @Usage("/msr reload")
   public void runReload(CommandSender sender) {
 
     try {

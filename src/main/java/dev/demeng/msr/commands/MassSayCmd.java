@@ -31,6 +31,7 @@ import dev.demeng.pluginbase.command.annotations.Aliases;
 import dev.demeng.pluginbase.command.annotations.Command;
 import dev.demeng.pluginbase.command.annotations.Default;
 import dev.demeng.pluginbase.command.annotations.Description;
+import dev.demeng.pluginbase.command.annotations.Usage;
 import dev.demeng.pluginbase.utils.TaskUtils;
 import java.util.Arrays;
 import lombok.RequiredArgsConstructor;
@@ -50,6 +51,7 @@ public class MassSayCmd extends CommandBase {
 
   @Default
   @Description("Forces all players to say a message or command.")
+  @Usage("/masssay </command|message>")
   public void runDefault(CommandSender sender, String[] args) {
 
     System.out.println(Arrays.toString(args));
