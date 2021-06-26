@@ -19,6 +19,7 @@
   <url>https://demeng.dev/</url>
 
   <build>
+    <finalName>${project.name}-${project.version}</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
