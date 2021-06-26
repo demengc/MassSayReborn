@@ -35,6 +35,7 @@ import dev.demeng.pluginbase.plugin.BasePlugin;
 import dev.demeng.pluginbase.utils.TaskUtils;
 import java.io.IOException;
 import lombok.Getter;
+import org.bstats.bukkit.Metrics;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 
@@ -73,7 +74,7 @@ public final class MassSayReborn extends BasePlugin {
     getCommandManager().register(new MassSayCmd(this));
 
     getLogger().info("Loading metrics...");
-    // new Metrics(this, 4739);
+    new Metrics(this, 4739);
 
     getLogger().info("Checking for updates...");
     checkUpdates();
