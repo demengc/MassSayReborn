@@ -20,10 +20,12 @@ prefix: "&7[&bMassSay&7] &r"
 delay-between-messages: 10
 
 # The message that will be sent if the command executor does not have sufficient permission.
-insufficient-permission: "&fYou do not have permission to execute that command.."
+# Use %permission% for the required permission.
+insufficient-permission: "&fYou must have the &7%permission% &fpermission to do that!"
 
-# This message will be sent if the command sender does not include a message to mass say.
-incorrect-usage: "&fPlease include a message or command you would like everyone to say/do."
+# This message will be sent if the command sender does not provide enough/valid arguments.
+# Use %usage% for the correct usage.
+incorrect-usage: "&fIncorrect usage! Did you mean: &7%usage%"
 
 # The message that is sent after the reload command is executed.
 reloaded: "&fFiles have been successfully reloaded."

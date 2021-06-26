@@ -32,6 +32,7 @@ import dev.demeng.pluginbase.command.annotations.Command;
 import dev.demeng.pluginbase.command.annotations.Default;
 import dev.demeng.pluginbase.command.annotations.Description;
 import dev.demeng.pluginbase.utils.TaskUtils;
+import java.util.Arrays;
 import lombok.RequiredArgsConstructor;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
@@ -42,22 +43,29 @@ import org.bukkit.entity.Player;
 @Aliases("massay")
 public class MassSayCmd extends CommandBase {
 
+  private static final String COMMAND_PERMISSION = "masssay.use.command";
+  private static final String MESSAGE_PERMISSION = "masssay.use.message";
+
   private final MassSayReborn i;
 
   @Default
   @Description("Forces all players to say a message or command.")
   public void runDefault(CommandSender sender, String[] args) {
 
+    System.out.println(Arrays.toString(args));
+
     final String message = String.join(" ", args);
 
     if (message.startsWith("/")) {
-      if (!sender.hasPermission("masssay.use.command")) {
-        ChatUtils.tell(sender, i.getSettings().getString("no-permission"));
+      if (!sender.hasPermission(COMMAND_PERMISSION)) {
+        ChatUtils.tell(sender, i.getBaseSettings().insufficientPermission()
+            .replace("%permission%", COMMAND_PERMISSION));
         return;
       }
 
-    } else if (!sender.hasPermission("masssay.use.message")) {
-      ChatUtils.tell(sender, i.getSettings().getString("no-permission"));
+    } else if (!sender.hasPermission(MESSAGE_PERMISSION)) {
+      ChatUtils.tell(sender, i.getBaseSettings().insufficientPermission()
+          .replace("%permission%", MESSAGE_PERMISSION));
       return;
     }
 
