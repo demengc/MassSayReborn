@@ -33,7 +33,6 @@ import dev.demeng.pluginbase.command.annotations.Command;
 import dev.demeng.pluginbase.command.annotations.Default;
 import dev.demeng.pluginbase.command.annotations.Description;
 import dev.demeng.pluginbase.command.annotations.Usage;
-import java.util.Arrays;
 import lombok.RequiredArgsConstructor;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
@@ -53,8 +52,6 @@ public class MassSayCmd extends CommandBase {
   @Description("Forces all players to say a message or command.")
   @Usage("/masssay </command|message>")
   public void runDefault(CommandSender sender, String[] args) {
-
-    System.out.println(Arrays.toString(args));
 
     final String message = String.join(" ", args);
 
