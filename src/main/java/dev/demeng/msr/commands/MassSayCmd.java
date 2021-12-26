@@ -25,6 +25,7 @@
 package dev.demeng.msr.commands;
 
 import dev.demeng.msr.MassSayReborn;
+import dev.demeng.pluginbase.TaskUtils;
 import dev.demeng.pluginbase.chat.ChatUtils;
 import dev.demeng.pluginbase.command.CommandBase;
 import dev.demeng.pluginbase.command.annotations.Aliases;
@@ -32,7 +33,6 @@ import dev.demeng.pluginbase.command.annotations.Command;
 import dev.demeng.pluginbase.command.annotations.Default;
 import dev.demeng.pluginbase.command.annotations.Description;
 import dev.demeng.pluginbase.command.annotations.Usage;
-import dev.demeng.pluginbase.utils.TaskUtils;
 import java.util.Arrays;
 import lombok.RequiredArgsConstructor;
 import org.bukkit.Bukkit;

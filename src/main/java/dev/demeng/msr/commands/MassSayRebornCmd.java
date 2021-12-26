@@ -51,7 +51,7 @@ public class MassSayRebornCmd extends CommandBase {
   @Description("Displays plugin information.")
   @Usage("/msr")
   public void runDefault(CommandSender sender) {
-    ChatUtils.tellColored(
+    ChatUtils.coloredTell(
         sender,
         "&3" + ChatUtils.CHAT_LINE,
         "&b&lRunning MassSayReborn v" + Common.getVersion() + " by Demeng.",

@@ -72,8 +72,8 @@
       <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
     </repository>
     <repository>
-      <id>sonatype</id>
-      <url>https://oss.sonatype.org/content/groups/public/</url>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
     </repository>
   </repositories>
 
@@ -85,9 +85,9 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>dev.demeng</groupId>
+      <groupId>com.github.Demeng7215.PluginBase</groupId>
       <artifactId>pluginbase-core</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
+      <version>da16d85f7e</version>
       <scope>compile</scope>
     </dependency>
     <dependency>

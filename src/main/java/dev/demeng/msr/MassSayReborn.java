@@ -63,7 +63,7 @@ public final class MassSayReborn extends BasePlugin {
       return;
     }
 
-    if (!settingsFile.configUpToDate(SETTINGS_VERSION)) {
+    if (settingsFile.isOutdated(SETTINGS_VERSION)) {
       Common.error(null, "Configuration files are outdated.", true);
       return;
     }
